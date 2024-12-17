@@ -2,7 +2,7 @@ import torch
 import torch.optim as optim
 from torch.optim.lr_scheduler import StepLR
 import matplotlib.pyplot as plt
-from model import Net
+from model_2 import Net
 from dataset import get_dataloaders
 from transforms import get_train_transforms, get_test_transforms
 from train_test import train, test

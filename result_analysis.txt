@@ -1,0 +1,56 @@
+1
+Targets: 
+  - Within 8k params, reach 99.4% accuracy. Benchmark with skeleton architecture with batch norm, dropout, maxpool and 1x1 convolution
+  - optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
+  - StepLR(optimizer, step_size=4, gamma=0.1)
+Results: 
+  - Train Accuracy        : 96.83%
+  - Test Accuracy(Best)   : 97.65% (Epochs 14 & 15)
+  - Parameter Count       : 3778
+Analysis:
+  - Train Accuracy got stuck at 96.8%, which means the model is not learning further.
+  - Test Accuracy is also constant around 97.6%
+  - Changing the optimizer can increase the accuracy
+
+2
+Targets:
+  - Within 8k params, reach 99.4% accuracy.
+  - Using same architecture as previous
+  - optim.Adam(model.parameters(), lr=0.01) 
+  - StepLR(optimizer, step_size=4, gamma=0.1)
+Results: 
+  - Train Accuracy        : 97.76%
+  - Test Accuracy(Best)   : 98.39% (Epoch 15)
+  - Parameter Count       : 3778
+Analysis:
+  - Train Accuracy got stuck at 97.76%, which means the model is not learning further.
+  - Test Accuracy is also constant around 98.38%
+  - Architecture seems inefficient to learn more, will increase the number of parameters
+
+3
+Targets:
+  - Within 8k params, reach 99.4% accuracy.
+  - Architecture changed to a bigger network, includes batch norm, dropout, maxpool and 1x1 convolution
+  - optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
+  - StepLR(optimizer, step_size=4, gamma=0.1)
+Results: 
+  - Train Accuracy        : 98.76%
+  - Test Accuracy(Best)   : 99.11% (Epoch 6)
+  - Parameter Count       : 7072
+Analysis:
+  - Accuracy increased to 99%
+  - Will check with other optimizer if it can cross 99.4 mark
+
+4
+Targets:
+  - Within 8k params, reach 99.4% accuracy.
+  - Using same architecture as previous
+  - optim.Adam(model.parameters(), lr=0.01) 
+  - StepLR(optimizer, step_size=4, gamma=0.1)
+Results: 
+  - Train Accuracy        : 99.13%
+  - Test Accuracy (Best)  : 99.45% (Epoch 14)
+  - Parameter Count       : 7072
+Analysis:
+  - Target Reached.
+  - Constant test accuracy at 99.4%
