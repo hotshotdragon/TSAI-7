@@ -54,3 +54,14 @@ Results:
 Analysis:
   - Target Reached.
   - Constant test accuracy at 99.4%
+
+
+
+
+
+
+
+
+I want to train RESNET-50 from scratch on Imagenet 1k dataset.
+write the code and also make sure the data download happens from huggingface
+I want to run this code on EC2 machine
