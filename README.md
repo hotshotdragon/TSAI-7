@@ -10,7 +10,6 @@ This project implements a convolutional neural network (CNN) to classify handwri
 - [Model Architecture](#model-architecture)
 - [Results](#results)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Installation
 
@@ -48,12 +47,8 @@ The model is a simple CNN with the following layers:
 
 ## Results
 
-The model achieves over 99% accuracy on the MNIST test set after training for 15 epochs.
+The model achieves over 99.40% accuracy on the MNIST test set within training for 15 epochs.
 
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
